@@ -1,0 +1,117 @@
+{
+  "project_info": {
+    "project_number": "576731289473",
+    "firebase_url": "https://ann-search-4c5c8.firebaseio.com",
+    "project_id": "ann-search-4c5c8",
+    "storage_bucket": "ann-search-4c5c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576731289473:android:5e4c95c0eddb4aac",
+        "android_client_info": {
+          "package_name": "com.grochowski.annsearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576731289473-blh1tblfagt9mldljcpskv0r8m4vk3a0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.grochowski.annsearch",
+            "certificate_hash": "cab32cbeb7bc2b61ac27bdaa86202ddb0514085d"
+          }
+        },
+        {
+          "client_id": "576731289473-bbngb62nq33gv3377284kmngshd2rl5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtRzCBJ6fELPZurYysuKBQhp3aYmD0aZg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576731289473-bbngb62nq33gv3377284kmngshd2rl5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576731289473:android:e28a61d22aeb0c47",
+        "android_client_info": {
+          "package_name": "com.grochowski.firebasegoogleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576731289473-bbngb62nq33gv3377284kmngshd2rl5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtRzCBJ6fELPZurYysuKBQhp3aYmD0aZg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576731289473:android:0560f7877f76f24e",
+        "android_client_info": {
+          "package_name": "com.grochowski.testapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576731289473-bbngb62nq33gv3377284kmngshd2rl5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtRzCBJ6fELPZurYysuKBQhp3aYmD0aZg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
