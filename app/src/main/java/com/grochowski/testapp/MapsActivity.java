@@ -130,6 +130,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
     }
 
+    public void distanceFromActualPosition(Location location){
+
+    }
+
 
     @Override
     public void onLocationChanged(Location location) {
