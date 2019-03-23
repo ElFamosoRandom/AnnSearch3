@@ -37,17 +37,31 @@ public class MainActivity extends AppCompatActivity {
     private boolean mLocationPermissionGranted = false;
     private FusedLocationProviderClient mFusedLocationClient;
 
+    private Button btnMap;
+    private Button btnAdd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button yourButton = (Button) findViewById(R.id.BtnMapAccess);
+        btnMap = findViewById(R.id.BtnMapAccess);
+        btnAdd = findViewById(R.id.addintentbtn);
 
-        yourButton.setOnClickListener(new View.OnClickListener() {
+        btnMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, MapsActivity.class));
             }
         });
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DataTestActivity.class));
+            }
+        });
+
+
+
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
     }

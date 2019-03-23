@@ -2,4 +2,12 @@
     <string name="app_name">testapp</string>
     <string name="title_activity_maps">Map</string>
     <string name="BtnMapAccessString">acceder à la map</string>
+    <string name="BtnAddAccessString">Ajouter à la bdd</string>
+    <string name="AddButtonString">Ajouter à la base de donnée</string>
+    <string name="HintIndice2String">ex : Batiment</string>
+    <string name="HintIndice1String">ex : rouge</string>
+    <string name="LabelIndice2String">Indice 2</string>
+    <string name="LabelIndice1String">Indice 1</string>
+    <string name="HintIndice3String">ex : Mexicain</string>
+    <string name="LabelIndice3String">Indice 3</string>
 </resources>
