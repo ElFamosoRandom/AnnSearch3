@@ -8,18 +8,20 @@ public class interestPoint {
     private String indice3;
     private Double latitude;
     private Double longitude;
+    private String name;
 
     public interestPoint() {
 
     }
 
-    public interestPoint(String id, String indice1, String indice2, String indice3, Double latitude, Double longitude) {
+    public interestPoint(String id, String indice1, String indice2, String indice3, Double latitude, Double longitude, String name) {
         this.id = id;
         this.indice1 = indice1;
         this.indice2 = indice2;
         this.indice3 = indice3;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.name = name;
     }
 
     public String getId() {
@@ -44,5 +46,8 @@ public class interestPoint {
 
     public Double getLongitude() {
         return longitude;
+    }
+    public String getName() {
+        return name;
     }
 }

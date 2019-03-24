@@ -33,18 +33,18 @@ public class DataTestActivity extends AppCompatActivity {
     private EditText mIndice1;
     private EditText mIndice2;
     private EditText mIndice3;
+    private EditText mName;
     private Button btnAdd;
+    private Button btnImage;
 
 
     private static final int REQUEST_LOCATION = 1;
 
 
-    private FusedLocationProviderClient mFusedLocationClient;
-    private Location mLocation;
-    private LocationManager locationManager;
-    private LocationRequest mLocationRequest;
 
-    private static final String TAG = "DataTestActivity";
+    private LocationManager locationManager;
+
+
 
     protected DatabaseReference databaseApp;
 
@@ -61,13 +61,23 @@ public class DataTestActivity extends AppCompatActivity {
         mIndice1 =  findViewById(R.id.editTextIndice1);
         mIndice2 =  findViewById(R.id.editTextIndice2);
         mIndice3 =  findViewById(R.id.editTextIndice3);
+        mName = findViewById(R.id.editTextNom);
 
         btnAdd =  findViewById(R.id.addButton);
+        btnImage = findViewById(R.id.btnImage);
+
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addDbInfos();
+            }
+        });
+
+        btnImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DataTestActivity.this, ImageActivity.class));
             }
         });
 
@@ -114,6 +124,7 @@ public class DataTestActivity extends AppCompatActivity {
             String indice1 = mIndice1.getText().toString().trim();
             String indice2 = mIndice2.getText().toString().trim();
             String indice3 = mIndice3.getText().toString().trim();
+            String nom = mName.getText().toString().trim();
             Double latitude = loc.latitude;
             Double longitude = loc.longitude;
 
@@ -121,7 +132,7 @@ public class DataTestActivity extends AppCompatActivity {
             if (!TextUtils.isEmpty(indice1) || !TextUtils.isEmpty(indice2) || !TextUtils.isEmpty(indice3)) {
                 String id = databaseApp.push().getKey();
 
-                interestPoint point = new interestPoint(id, indice1, indice2, indice3, latitude, longitude);
+                interestPoint point = new interestPoint(id, indice1, indice2, indice3, latitude, longitude,nom);
                 databaseApp.child(id).setValue(point);
 
                 Toast.makeText(this, "Ajout réussi", Toast.LENGTH_LONG).show();
