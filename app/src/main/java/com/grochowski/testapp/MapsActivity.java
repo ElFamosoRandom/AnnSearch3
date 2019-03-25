@@ -106,7 +106,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                    databaseApp.child("-LalkRIDbrlSpEgSMnlJ").addValueEventListener(new ValueEventListener() {
+                    databaseApp.child("-LanMZhI6LPbkCJuJocm").addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             Chasse chasseactive = dataSnapshot.getValue(Chasse.class);
@@ -140,11 +140,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                         mIndice2.setText(secondindice);
                                         mIndice2.setVisibility(v.VISIBLE);
                                         countIndice += 1;
+                                        Toast.makeText(MapsActivity.this, "Loupé ! essayez avec un indice supplémentaire !", Toast.LENGTH_SHORT).show();
                                     }
                                 } else {
 
                                     mIndice2.setVisibility(v.VISIBLE);
                                     countIndice += 1;
+                                    Toast.makeText(MapsActivity.this, "Loupé ! essayez avec un indice supplémentaire !", Toast.LENGTH_SHORT).show();
 
                                 }
                             }
@@ -173,7 +175,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         btnVerif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                databaseApp.child("-LalkRIDbrlSpEgSMnlJ").addValueEventListener(new ValueEventListener() {
+                databaseApp.child("-LanMZhI6LPbkCJuJocm").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         Chasse chasseactive = dataSnapshot.getValue(Chasse.class);
@@ -191,7 +193,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         String msg = latiacti.toString() +" " + longiacti.toString()+ " " + lat.toString()+ " " + longi.toString();
 
-                        Toast.makeText(MapsActivity.this, msg , Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MapsActivity.this, msg , Toast.LENGTH_SHORT).show();
 
                         if (countIndice == 2) {
                             if (latiacti <= lat + 0.000001 && latiacti >= lat - 0.000001) {
@@ -202,6 +204,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     mIndice2.setText(secondindice);
                                     mIndice2.setVisibility(v.VISIBLE);
                                     countIndice += 1;
+                                    Toast.makeText(MapsActivity.this, "Loupé ! essayez avec un indice supplémentaire !", Toast.LENGTH_SHORT).show();
                                 }
                                 //mIndice2.setText(secondindice);
                                 //mIndice2.setVisibility(v.VISIBLE);
@@ -215,6 +218,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 mIndice2.setText(secondindice);
                                 mIndice2.setVisibility(v.VISIBLE);
                                 countIndice += 1;
+                                Toast.makeText(MapsActivity.this, "Loupé ! essayez avec un indice supplémentaire !", Toast.LENGTH_SHORT).show();
                             }
 
                         }
@@ -227,6 +231,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             countIndice += 1;
                             //btnStart.setVisibility(v.INVISIBLE);
                             //btnStart.setText("Vérifier ma position");
+                            if (latiacti <= lat + 0.000001 && latiacti >= lat - 0.000001) {
+                                if (longiacti <= longi + 0.000001 && longiacti >= longi - 0.000001) {
+                                    Toast.makeText(MapsActivity.this, "Vous avez trouvé le bon point, bravo", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(MapsActivity.this, "Vous n'avez pas réussi à trouver le lieu ! pas de chance !", Toast.LENGTH_SHORT).show();
+
+                                }
+                                //mIndice2.setText(secondindice);
+                                //mIndice2.setVisibility(v.VISIBLE);
+                                //indiceLayout.setVisibility(v.VISIBLE);
+                                //btnVerif.setVisibility(v.VISIBLE);
+                                //countIndice += 1;
+                                //btnStart.setVisibility(v.INVISIBLE);
+                                //btnStart.setText("Vérifier ma position");
+                            }
+                            else{
+                                Toast.makeText(MapsActivity.this, "Vous n'avez pas réussi à trouver le lieu ! pas de chance !", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     }
 

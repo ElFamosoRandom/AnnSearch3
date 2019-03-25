@@ -144,8 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mLocationPermissionGranted = true;
-            Toast.makeText(this, "La permission est accordé, maintenant faut faire le reste du code 1", Toast.LENGTH_SHORT).show();
-            Log.d("ANCIEN TCHAT POSITION","IF APRES PERMISSON 1");
+
             getLastKnownLocation();
 
         } else {
@@ -199,8 +198,7 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case PERMISSIONS_REQUEST_ENABLE_GPS: {
                 if(mLocationPermissionGranted){
-                    Toast.makeText(this, "La permission est accordé, maintenant faut faire le reste du code 2", Toast.LENGTH_SHORT).show();
-                    Log.d("ANCIEN TCHAT POSITION","IF APRES PERMISSON 2");
+
                     getLastKnownLocation();
                 }
                 else{
@@ -218,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(checkMapServices()){
             if(mLocationPermissionGranted){
-                Toast.makeText(this, "La permission est accordé, maintenant faut faire le reste du code 3", Toast.LENGTH_SHORT).show();
+
                 getLastKnownLocation();
             }
             else{

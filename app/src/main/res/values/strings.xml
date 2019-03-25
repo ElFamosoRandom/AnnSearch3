@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">testapp</string>
+    <string name="app_name">AnnSearch</string>
     <string name="title_activity_maps">Map</string>
     <string name="BtnMapAccessString">acceder à la map</string>
     <string name="BtnAddAccessString">Ajouter à la bdd</string>
