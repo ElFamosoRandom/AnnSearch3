@@ -56,7 +56,7 @@ public class DataTestActivity extends AppCompatActivity {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
 
-        databaseApp = FirebaseDatabase.getInstance().getReference();
+        databaseApp = FirebaseDatabase.getInstance().getReference().child("interestPoint");
 
         mIndice1 =  findViewById(R.id.editTextIndice1);
         mIndice2 =  findViewById(R.id.editTextIndice2);

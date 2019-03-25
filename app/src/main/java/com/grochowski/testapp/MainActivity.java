@@ -26,6 +26,8 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import static com.grochowski.testapp.constantes.constantes.ERROR_DIALOG_REQUEST;
 import static com.grochowski.testapp.constantes.constantes.PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION;
@@ -41,10 +43,15 @@ public class MainActivity extends AppCompatActivity {
     private Button btnMap;
     private Button btnAdd;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
+
         btnMap = findViewById(R.id.BtnMapAccess);
         btnAdd = findViewById(R.id.addintentbtn);
 
@@ -219,5 +226,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        //updateUI(currentUser);
     }
 }

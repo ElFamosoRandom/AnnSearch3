@@ -103,6 +103,7 @@ public class ImageActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
+
                             Toast.makeText(ImageActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
                             final Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
